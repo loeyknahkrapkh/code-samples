@@ -7,8 +7,18 @@ import PackageDescription
     let packageSettings = PackageSettings(
         // Customize the product types for specific package product
         // Default is .staticFramework
-        // productTypes: ["Alamofire": .framework,] 
-        productTypes: [:]
+        // productTypes: ["Alamofire": .framework,]
+        
+        /*
+         The Composable Architecture compatibility issues #6320
+            - https://github.com/tuist/tuist/issues/6320
+         */
+        productTypes: [
+            "ComposableArchitecture": .framework,
+            "Dependencies": .framework,
+            "Perception": .framework,
+            "XCTestDynamicOverlay": .framework
+        ]
     )
 #endif
 
