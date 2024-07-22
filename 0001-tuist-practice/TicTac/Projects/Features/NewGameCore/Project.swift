@@ -1,20 +1,18 @@
 import ProjectDescription
 
 let project = Project(
-    name: "AppCore",
+    name: "NewGameCore",
     targets: [
         .target(
-            name: "AppCore",
+            name: "NewGameCore",
             destinations: [.iPhone],
             product: .framework,
-            bundleId: "com.test.AppCore",
+            bundleId: "com.test.NewGameCore",
             deploymentTargets: .iOS("17.0"),
             sources: ["Sources/**"],
             dependencies: [
                 .project(target: "Shared", path: "../../Shared"),
-                .project(target: "AuthenticationClient", path: "../AuthenticationClient"),
-                .project(target: "LoginCore", path: "../LoginCore"),
-                .project(target: "NewGameCore", path: "../NewGameCore"),
+                .project(target: "GameCore", path: "../GameCore"),
             ]
         )
     ]

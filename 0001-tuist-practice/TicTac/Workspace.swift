@@ -14,5 +14,9 @@ let workspace = Workspace(
         "Projects/Features/TwoFactorUI",
         "Projects/Features/LoginCore",
         "Projects/Features/LoginUI",
+        "Projects/Features/GameCore",
+        "Projects/Features/GameUI",
+        "Projects/Features/NewGameCore",
+        "Projects/Features/NewGameUI",
     ]
 )

@@ -1,6 +1,7 @@
 import AppCore
 import ComposableArchitecture
 import LoginUI
+import NewGameUI
 import SwiftUI
 
 public struct AppView: View {
@@ -11,10 +12,14 @@ public struct AppView: View {
     }
     
     public var body: some View {
-        NavigationStack {
-            switch store.case {
-            case .login(let store):
+        switch store.case {
+        case .login(let store):
+            NavigationStack {
                 LoginView(store: store)
+            }
+        case .newGame(let store):
+            NavigationStack {
+                NewGameView(store: store)
             }
         }
     }

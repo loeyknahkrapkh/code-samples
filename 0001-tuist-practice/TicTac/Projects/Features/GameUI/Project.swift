@@ -1,20 +1,18 @@
 import ProjectDescription
 
 let project = Project(
-    name: "AppUI",
+    name: "GameUI",
     targets: [
         .target(
-            name: "AppUI",
+            name: "GameUI",
             destinations: [.iPhone],
             product: .framework,
-            bundleId: "com.test.AppUI",
+            bundleId: "com.test.GameUI",
             deploymentTargets: .iOS("17.0"),
             sources: ["Sources/**"],
             resources: ["Resources/**"],
             dependencies: [
-                .project(target: "AppCore", path: "../AppCore"),
-                .project(target: "LoginUI", path: "../LoginUI"),
-                .project(target: "NewGameUI", path: "../NewGameUI"),
+                .project(target: "GameCore", path: "../GameCore"),
             ]
         )
     ]
